@@ -9,6 +9,34 @@ function Header({ name, year }) {
   );
 }
 
+// function Main(){
+//   return (
+//     <ul>
+//       <li>1</li>
+//       <li>2</li>
+//     </ul>
+//   )
+// }
+
+
+const items = [
+  'Brinjal Curry',
+  'Alu Gobi Curry',
+  'Gongura Pappu'
+]
+
+function Main({dishes}){
+  return (
+  <ul>
+    {
+      dishes.map((dish) => (
+        <li>{dish}</li>
+      ))
+    }
+  </ul>
+);
+}
+
 function App() {
   return (
     <div>
@@ -16,6 +44,7 @@ function App() {
       <main>
         <h2>We serve the most delicious food around</h2>
       </main>
+      <Main dishes={items}/>
     </div>
   );
 }
