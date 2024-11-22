@@ -25,16 +25,29 @@ const items = [
   'Gongura Pappu'
 ]
 
+// function Main({dishes}){
+//   return (
+//   <ul>
+//     {
+//       dishes.map((dish) => (
+//         <li>{dish}</li>
+//       ))
+//     }
+//   </ul>
+// );
+// }
+
 function Main({dishes}){
-  return (
-  <ul>
-    {
-      dishes.map((dish) => (
-        <li>{dish}</li>
-      ))
-    }
-  </ul>
-);
+  return(
+    <ul>
+      {
+        dishes.map((dish) => (
+          <li style = {{listStyleType : "none"}}>{dish}</li>
+        ))
+      }
+    </ul>
+
+  );
 }
 
 function App() {
