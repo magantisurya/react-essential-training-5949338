@@ -1,5 +1,6 @@
 import "./App.css";
 import chef from "./images/chef.jpg";
+// import React from "react"; 
 
 function Header({ name, year }) {
   return (
@@ -23,6 +24,11 @@ const dishObjects = items.map((dish, i) => ({
 
 function Main({ dishes }) {
   return (
+   // <React.Fragment>
+   <>
+    <div>
+      Welcome to my beautiful restaurant
+    </div>
     <main>
       <img
         src={chef}
@@ -40,6 +46,8 @@ function Main({ dishes }) {
         ))}
       </ul>
     </main>
+    </>
+    // </React.Fragment>
   );
 }
 
