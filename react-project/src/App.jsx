@@ -1,5 +1,7 @@
 import "./App.css";
 import chef from "./images/chef.jpg";
+import {useState} from react;
+import React from "react";
 
 function Header({ name, year }) {
   return (
