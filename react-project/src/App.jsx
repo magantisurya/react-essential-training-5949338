@@ -22,11 +22,13 @@ const dishObjects = items.map((dish, i) => ({
   title: dish
 }));
 
-function Main({ dishes }) {
+//We are passing the state variables via the properties
+function Main({ dishes, openStatus }) {
   return (
     <>
       <div>
-        <h2>Welcome to this beautiful restaurant!</h2>
+        <h2>Welcome to this beautiful restaurant! {""}
+          {openStatus ? "Open":"Closed"}</h2>
       </div>
       <main>
         <img
@@ -62,7 +64,7 @@ function App() {
         {status ? "Close" : "Open"} Restaurant
       </button>
       <Header name="Alex" year={new Date().getFullYear()} />
-      <Main dishes={dishObjects} />
+      <Main dishes={dishObjects} openStatus = {status}/>
     </div>
   );
 }
